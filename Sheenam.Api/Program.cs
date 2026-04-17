@@ -1,7 +1,7 @@
-//==========================
+//==================================================
 // Copyright (c) Coalition of Good-Hearted Engineers
-// Free to Use comfort and Peace
-//==========================
+// Free to Use Comfort and Peace
+//==================================================
 
 var builder = WebApplication.CreateBuilder(args);
 

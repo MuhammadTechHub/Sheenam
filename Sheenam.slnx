@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Sheenam.Api.Infrastructure.Build/Sheenam.Api.Infrastructure.Build.csproj" Id="969ac016-25cd-42c0-9835-d057bd58dbdf" />
   <Project Path="Sheenam.Api.Test.Unit/Sheenam.Api.Test.Unit.csproj" Id="52dfcd13-0c79-4917-a9a7-5178f777c6bb" />
   <Project Path="Sheenam.Api/Sheenam.Api.csproj" />
 </Solution>
