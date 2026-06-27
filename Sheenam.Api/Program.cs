@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<StorageBroker>();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+builder.Services.AddTransient<IStorageBroker, StorageBroker>();
 
 var app = builder.Build();
 
