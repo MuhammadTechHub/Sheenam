@@ -3,12 +3,14 @@
 // Free To Use To Find Comfort and Peace
 //==================================================
 
-using Sheenam.Api.Models.Foundations.Guests;
+using Xeptions;
 
-namespace Sheenam.Api.Services.Foundations.Guests
+namespace Sheenam.Api.Services.Foundations.Guests.Exceptions
 {
-    public interface IGuestService
+    public class NullGuestException : Xeption
     {
-        public ValueTask<Guest> AddGuestAsync(Guest guest);
+        public NullGuestException()
+            : base(message: "Guest is null")
+        {}
     }
 }
