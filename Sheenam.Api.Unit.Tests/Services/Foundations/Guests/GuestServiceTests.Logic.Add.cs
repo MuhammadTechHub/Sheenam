@@ -1,4 +1,4 @@
-﻿//==================================================
+﻿    //==================================================
 // Copyright (c) Coalition of Good-Hearted Engineers
 // Free To Use To Find Comfort and Peace
 //==================================================
@@ -19,12 +19,12 @@ namespace Sheenam.Api.Unit.Tests.Services.Foundations.Guests
             // given
             Guest randomGuest = CreateRandomGuest();
             Guest inputGuest = randomGuest;
-            Guest returningGuest = inputGuest;
-            Guest expectedGuest = returningGuest.DeepClone();
+            Guest storageGuest = inputGuest;
+            Guest expectedGuest = storageGuest.DeepClone();
 
             this.storageBrokerMock.Setup(broker =>
-                broker.InsertGuestAsync(randomGuest))
-                    .ReturnsAsync(randomGuest);
+                broker.InsertGuestAsync(inputGuest))
+                    .ReturnsAsync(storageGuest);
 
             // when
             Guest actualGuest = 
