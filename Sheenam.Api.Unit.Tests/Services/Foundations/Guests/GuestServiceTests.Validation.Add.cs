@@ -105,7 +105,7 @@ namespace Sheenam.Api.Unit.Tests.Services.Foundations.Guests
         }
 
         [Fact]
-        public async Task ShouldThrowValidationExceptionGenderOnAddIfGenderIsInvalidAndLogItAsynch()
+        public async Task ShouldThrowValidationExceptionGenderOnAddIfGenderIsInvalidAndLogItAsync()
         {
             // given
             Guest randomGuest = CreateRandomGuest();
