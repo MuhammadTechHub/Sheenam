@@ -42,6 +42,9 @@ namespace Sheenam.Api.Unit.Tests.Services.Foundations.Guests
         private static int GetRandomNumber() =>
             new IntRange(min: 2, max: 9).GetValue();
 
+        private static string GetRandomString() =>
+            new MnemonicString().GetValue();
+
         private static SqlException GetSqlError() =>
             (SqlException)FormatterServices.GetUninitializedObject(typeof(SqlException));
         
