@@ -23,12 +23,12 @@ namespace Sheenam.Api.Services.Foundations.Guests
 
         // Exception Noise Cancellation 
         public ValueTask<Guest> AddGuestAsync(Guest guest) =>
-            TryCatch(async () =>
-            {
-                ValidateGuestOnAdd(guest);
-                guest.Id = Guid.NewGuid();
+        TryCatch(async () =>
+        {
+            throw new System.Exception("Fake exception to test exception noise cancellation");
+            ValidateGuestOnAdd(guest);
 
-                return await this.storageBroker.InsertGuestAsync(guest);
-            });
+            return await this.storageBroker.InsertGuestAsync(guest);
+        });
     }
 }
