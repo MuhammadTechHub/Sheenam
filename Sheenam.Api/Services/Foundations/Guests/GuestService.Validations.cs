@@ -3,8 +3,6 @@
 // Free To Use To Find Comfort and Peace
 //==================================================
 
-using System.Data;
-using System.Diagnostics;
 using Sheenam.Api.Models.Foundations.Guests;
 using Sheenam.Api.Models.Foundations.Guests.Exceptions;
 
@@ -34,7 +32,7 @@ namespace Sheenam.Api.Services.Foundations.Guests
             }
         }
 
-        private static dynamic IsInvalid(Guid id) => new 
+        private static dynamic IsInvalid(Guid id) => new
         {
             Condition = id == Guid.Empty,
             Message = "Id is required"
@@ -60,7 +58,7 @@ namespace Sheenam.Api.Services.Foundations.Guests
 
         private static void Validate(params (dynamic Rule, string Parameter)[] validations)
         {
-            var invalidGuestException = 
+            var invalidGuestException =
                 new InvalidGuestException();
 
             foreach ((dynamic rule, string parameter) in validations)
